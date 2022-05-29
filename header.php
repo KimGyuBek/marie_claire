@@ -18,6 +18,9 @@
                         <?php } else {
                             $userid = $_SESSION['userid']; ?>
                         <li>
+                            <a href=""><span class="menu-text"><?= $_SESSION['username'] ?>님</span></a>
+                        </li>
+                        <li>
                             <a href="login/logout.php"><span class="menu-text">Logout</span></a>
                         </li>
                         <li>
@@ -112,7 +115,7 @@
                         </li>
                         <li class="menu-item">
                             <a href="" class="main-menu-link" style="height: 50px;">
-                                <span class="menu-text">LIEF</span></a>
+                                <span class="menu-text">LIFE</span></a>
                         </li>
                         <li class="menu-item">
                             <a href="" class="main-menu-link" style="height: 50px;">

@@ -86,7 +86,7 @@
 
                                 <!-- login etc -->
                                 <div class="login_etc">
-                                    <a href="member_form.html">회원가입</a>
+                                    <a href="member_form.php">회원가입</a>
                                     |
                                     <a href="">아이디 찾기</a>
                                     |

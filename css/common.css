@@ -332,10 +332,15 @@ img {
 }
 
 #wrapper {
+  /* margin: 20px auto; */
+  /* width: 1024px;
+  padding: 20px auto; */
   width: 100%;
   max-width: none;
   background-color: #ffffff;
   overflow: visible;
+  padding-left: 40px auto;
+  padding-right: 40px auto;
 }
 
 .empty_blank {

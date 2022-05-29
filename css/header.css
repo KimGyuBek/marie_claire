@@ -4,8 +4,8 @@
 }
 
 #second-header {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 30px auto;
+  padding-right: 30px auto;
   font-size: 14px;
   color: #ffffff;
   background-color: #000000;
@@ -22,6 +22,9 @@
   float: right;
 }
 .fusion-row {
+  /* margin: 0 auto; */
+  /* margin-left: auto;
+  margin-right: auto; */
   padding-left: 25px;
   padding-right: 25px;
   /* padding-left: 20px auto;
@@ -115,8 +118,8 @@
 }
 
 .header-main-menu > .fusion-row {
-  padding-left: 30px auto;
-  padding-right: 30px auto;
+  /* padding-left: 30px auto;
+  padding-right: 30px auto; */
 }
 .blank {
   height: 20px;

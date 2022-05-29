@@ -125,7 +125,7 @@ div#slider figure {
 }
 
 .slide2 > li > span > img {
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 .slide2 > li > span > p {
@@ -133,4 +133,8 @@ div#slider figure {
   align-items: center;
   text-align: center;
   margin-top: 10px;
+}
+
+.sub_post > ul {
+  padding-left: 0;
 }
