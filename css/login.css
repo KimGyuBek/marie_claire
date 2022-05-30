@@ -3,7 +3,8 @@
   margin: 10% auto 5% auto;
 }
 
-#login_title > span > h1 {
+#login_title > span > h1,
+#member_title > span > h1 {
   font-size: 50px;
   text-align: center;
   font-weight: bold;
@@ -29,7 +30,8 @@
   padding-right: 40px;
 }
 
-.login_btn {
+.login_btn,
+.member_btn {
   color: aliceblue;
   font-size: 12px;
   display: inline-block;
@@ -38,6 +40,7 @@
   width: 92px;
   line-height: 52px;
   background-color: black;
+  font-weight: bold;
 }
 
 .login_blank_border {
@@ -82,4 +85,85 @@
 
 .sns_img > img {
   width: 50%;
+}
+
+.title_area .member_subtitle {
+  margin-top: 15px;
+}
+
+.title_area {
+  text-align: center;
+}
+
+.table_wrap {
+  font-size: 13px;
+}
+
+.table_list2 {
+  width: 450px;
+  margin: 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
+  border-color: grey;
+}
+
+form {
+  display: block;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-inline-color: inherit;
+}
+
+.table_list2 th {
+  height: 40px;
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: -internal-center;
+}
+
+.table_list2 input {
+  width: 450px;
+  height: 40px;
+  border: 1px solid #cdcdcd;
+}
+
+input[type="text"],
+input[type="file"],
+input[type="password"] {
+  -webkit-appearance: none;
+  outline-style: none;
+  padding-left: 7px;
+  height: 27px;
+  line-height: 27px;
+  border: 1px solid #e2e2e2;
+}
+
+.margin_right {
+  margin-right: 10px;
+}
+button,
+input,
+textarea {
+  font-size: 13px;
+  margin: 0;
+  color: #272727;
+  vertical-align: middle;
+  font-family: "Noto Sans KR", sans-serif;
 }

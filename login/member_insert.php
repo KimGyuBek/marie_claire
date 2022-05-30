@@ -11,6 +11,7 @@ $sql = "insert into members(id, pass, name, email, regist_day,
         level) ";
 $sql .= "values('$id', '$pass', '$name', '$email', '$regist_day', 9)";
 
+// die($sql);
 mysqli_query($con, $sql);     // $sql에 저장된 명령 실행 	⑥
 mysqli_close($con);
 

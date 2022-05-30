@@ -1,3 +1,19 @@
+<?php
+session_start();
+$userid = $_SESSION['userid'];
+$con = mysqli_connect("localhost", "user1", "12345", "marieclaire");
+$sql = "select * from members where id='$userid'";
+$result = mysqli_query($con, $sql);
+$row = mysqli_fetch_array($result);
+// $id= $row["id"];
+$pass = $row["pass"];
+$name = $row["name"];
+$email = $row["email"];
+
+mysqli_close($con);
+// die($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,21 +21,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARIECLAIREKOREA - 회원가입</title>
+    <title>MARIECLAIREKOREA - 정보수정</title>
     <link rel="stylesheet" href="../css/header.css?<?php echo date('Y h:i:s'); ?>">
     <link rel="stylesheet" href="../css/common.css?<?php echo date('Y h:i:s'); ?>">
     <link rel="stylesheet" href="../css/login.css?<?php echo date('Y h:i:s'); ?>">
     <script>
-    function check_id() {
-        var userid = document.getElementById("uid").value;
-        if (userid) {
-            url = "member_check_id.php?userid=" + userid;
-            window.open(url, "IDchk", "width=400,height=200");
-        } else
-            alert("아이디를 입력하세요.");
-
-    }
-
     function check_pw() {
         var pw1 = document.getElementById("pw1").value;
         var pw2 = document.getElementById("pw2").value;
@@ -54,17 +60,17 @@
                         <!-- login title  -->
                         <div id="member_title" class="fusion-row aligncenter">
                             <span>
-                                <h1>회원가입</h1>
+                                <h1>회원정보 수정</h1>
                             </span>
                             <!-- login title end -->
                         </div>
 
                         <!-- sub title  -->
-                        <div class="member_subtitle">
+                        <!-- <div class="member_subtitle">
                             마리끌레르 통합 회원가입 페이지에 오신 것을 환영합니다.
                             <br>
                             통합회원으로 가입하시면 다양한 서비스를 보다 편리하게 이용하실 수 있습니다.
-                        </div>
+                        </div> -->
                         <!-- sub title end -->
 
                     </div>
@@ -74,7 +80,7 @@
                     <div class="table_wrap">
 
                         <!-- member form  -->
-                        <form name="memFrm" method="POST" action="member_insert.php">
+                        <form name="memFrm" method="POST" action="member_modify.php?id=<?= $userid ?>">
 
                             <!-- member table -->
                             <table class="table_list2 form" style="text-align:left;">
@@ -87,15 +93,9 @@
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="uid" name="id" value="" class="margin_right large"
-                                                placeholder="영문, 숫자로만 6-20자" maxlength="50"
-                                                style="background-color: rgb(235, 235, 235);" required>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="join_id">
-                                            <input class="member_btn" type="button" value="중복확인" onclick="check_id()"
-                                                style="margin-top: 10px;">
+                                            <input type="text" id="uid" name="id" value="<?= $userid ?>"
+                                                class="margin_right large" placeholder="" maxlength="50"
+                                                style="background-color: rgb(235, 235, 235);" required readonly>
                                         </td>
                                     </tr>
                                     <tr>
@@ -132,9 +132,9 @@
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="" name="name" value="" class="margin_right large"
-                                                placeholder="실명" maxlength="50"
-                                                style="background-color: rgb(235, 235, 235);" required>
+                                            <input type="text" id="" name="name" value="<?= $name ?>"
+                                                class="margin_right large" placeholder="" maxlength="50"
+                                                style="background-color: rgb(235, 235, 235);" required readonly>
                                         </td>
                                     </tr>
                                     <tr>
@@ -145,8 +145,8 @@
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="email" id="" name="email" value="" class="margin_right large"
-                                                placeholder="" maxlength="50"
+                                            <input type="email" id="" name="email" value="<?= $email ?>"
+                                                class="margin_right large" placeholder="" maxlength="50"
                                                 style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
@@ -155,7 +155,7 @@
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input class="login_btn" type="submit" value="회원가입" onclick="check_pw()">
+                                            <input class="login_btn" type="submit" value="수정완료" onclick="check_pw()">
                                         </td>
                                     </tr>
                                 </tbody>

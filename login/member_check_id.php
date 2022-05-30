@@ -1,5 +1,3 @@
-<h3>아이디 중복 체크</h3>
-<p>
     <?php
     $id = $_GET["userid"];
 
@@ -8,11 +6,18 @@
     $result = mysqli_query($con, $sql);
     $num_record = mysqli_num_rows($result);
     if ($num_record) {
-        echo "<li>" . $id . " 아이디는 중복됩니다.</li>";
-        echo "<li>다른 아이디를 사용해 주세요!</li>";
+        echo "
+        <script>
+        alert('중복된 아이디입니다.');
+        window.close();
+        </script>
+        ";
     } else {
-        echo "<li>" . $id . " 아이디는 사용 가능합니다.</li>";
+        echo  "
+        <script>
+        alert('사용 가능한 아이디입니다.');
+        window.close();
+        </script>";
     }
     mysqli_close($con);
     ?>
-</p>

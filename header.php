@@ -13,7 +13,7 @@
                         <?php session_start();
                         if (!isset($_SESSION['userid'])) { ?>
                         <li>
-                            <a href="login/login_form.php"><span class="menu-text">Login</span></a>
+                            <a href="/login/login_form.php"><span class="menu-text">Login</span></a>
                         </li>
                         <?php } else {
                             $userid = $_SESSION['userid']; ?>
@@ -21,10 +21,10 @@
                             <a href=""><span class="menu-text"><?= $_SESSION['username'] ?>님</span></a>
                         </li>
                         <li>
-                            <a href="login/logout.php"><span class="menu-text">Logout</span></a>
+                            <a href="/login/logout.php"><span class="menu-text">Logout</span></a>
                         </li>
                         <li>
-                            <a href="login/member_modify_form.php"><span class="menu-text">정보수정</span></a>
+                            <a href="/login/member_modify_form.php"><span class="menu-text">정보수정</span></a>
                         </li>
                         <?php } ?>
                         <li>
