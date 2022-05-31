@@ -79,6 +79,7 @@
                             <!-- member table -->
                             <table class="table_list2 form" style="text-align:left;">
                                 <tbody>
+                                    <!-- id -->
                                     <tr>
                                         <th>
                                             <span class="point2">*</span>
@@ -92,12 +93,18 @@
                                                 style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
+                                    <!-- id end -->
+
+                                    <!-- id duplicate check -->
                                     <tr>
                                         <td class="join_id">
                                             <input class="member_btn" type="button" value="중복확인" onclick="check_id()"
                                                 style="margin-top: 10px;">
                                         </td>
                                     </tr>
+                                    <!-- id duplicate check end -->
+
+                                    <!-- password -->
                                     <tr>
                                         <th>
                                             <span class="point2">*</span>
@@ -111,6 +118,9 @@
                                                 maxlength="50" style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
+                                    <!-- passwrod end -->
+
+                                    <!-- passwrod check -->
                                     <tr>
                                         <th>
                                             <span class="point2">*</span>
@@ -124,6 +134,9 @@
                                                 style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
+                                    <!-- password check end -->
+
+                                    <!-- name -->
                                     <tr>
                                         <th>
                                             <span class="point2">*</span>
@@ -137,6 +150,9 @@
                                                 style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
+                                    <!-- name end -->
+
+                                    <!-- email -->
                                     <tr>
                                         <th>
                                             <span class="point2">*</span>
@@ -150,6 +166,9 @@
                                                 style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
+                                    <!-- email -->
+
+                                    <!-- submit btn -->
                                     <tr>
                                         <th></th>
                                     </tr>
@@ -158,12 +177,11 @@
                                             <input class="login_btn" type="submit" value="회원가입" onclick="check_pw()">
                                         </td>
                                     </tr>
+                                    <!-- submit btn end -->
                                 </tbody>
 
                             </table>
                             <!-- member table end -->
-
-
 
                         </form>
                         <!-- member form end -->
@@ -171,17 +189,7 @@
                     </div>
                     <!-- table wrap end -->
 
-
-
-
-
-
-
-
-
-
                 </div>
-
                 <div class="empty_blank"></div>
 
             </div>

@@ -56,8 +56,8 @@
                                             <tr>
                                                 <td style="width:20%;">아이디</td>
                                                 <td style="width:55%;">
-                                                    <input id="login_id" type="text" name="id" placeholder="아이디"
-                                                        required style="width:100%;height:80%" value tabindex="1">
+                                                    <input id="login_id" type="text" name="id" placeholder="" required
+                                                        style="width:100%;height:80%" value tabindex="1">
                                                 </td>
                                                 <td rowspan="2" style="width: 25%;text-align:right;">
                                                     <input class="login_btn" type="submit" value="로그인">
@@ -67,11 +67,10 @@
                                                 <td>비밀번호</td>
                                                 <td>
                                                     <input id="login_pwd" type="password" name="pass" id=""
-                                                        placeholder="비밀번호" required style="width: 100%;height:80%" value
+                                                        placeholder="" required style="width: 100%;height:80%" value
                                                         tabindex="2">
                                                 </td>
                                             </tr>
-
                                         </tbody>
                                     </table>
                                 </form>
@@ -113,8 +112,6 @@
                                         <img src="/img/login/join_main_kakao.png" alt="">
                                         <img src="/img/login/m_naver.png" alt="">
                                     </div>
-
-
                                 </div>
                                 <!-- login sns end -->
                             </div>
@@ -122,24 +119,17 @@
                             <!-- login insert end -->
                             <!-- login box end -->
 
-
-
                         </div>
 
-
                         <div class="empty_blank"></div>
-
                     </div>
                 </div>
-
                 <div class="empty_blank3"></div>
             </div>
             <!-- contents end -->
 
         </div>
         <!-- wrapper end -->
-
-
 
         <!-- footer start -->
         <footer>
