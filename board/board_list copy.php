@@ -23,7 +23,7 @@ $con = mysqli_connect("localhost", "user1", "12345", "marieclaire");
 $sql = "select * from " . $dtable;
 // die($sql);
 $result = mysqli_query($con, $sql);
-// print_r($result);
+print_r($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,14 +50,13 @@ $result = mysqli_query($con, $sql);
             </header>
             <!-- header end -->
 
-            <!-- slider -->
-            <div class="empty_blank">
-            </div>
-            <!-- slider end -->
 
             <div id="contents">
                 <!-- sub_contents -->
                 <div class="sub_contents">
+
+
+                    <div class="empty_blank"></div>
 
                     <!-- list -->
                     <article class="sub_post">
@@ -90,7 +89,6 @@ $result = mysqli_query($con, $sql);
             </div>
         </div>
         <!-- wrapper end -->
-
     </div>
 
 
