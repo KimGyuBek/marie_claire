@@ -19,6 +19,7 @@ if (!$num_match) {
     $row = mysqli_fetch_array($result);
     $db_pass = $row["pass"];
 
+    //sql disconnect
     mysqli_close($con);
 
     if ($pass != $db_pass) {

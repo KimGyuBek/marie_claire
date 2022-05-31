@@ -27,15 +27,15 @@ mysqli_close($con);
     <link rel="stylesheet" href="../css/common.css?<?php echo date('Y h:i:s'); ?>">
     <link rel="stylesheet" href="../css/login.css?<?php echo date('Y h:i:s'); ?>">
     <script>
-    function check_pw() {
-        var pw1 = document.getElementById("pw1").value;
-        var pw2 = document.getElementById("pw2").value;
-        if (pw1 != pw2) {
-            alert("패스워드가 일치하지 않습니다");
-            return false;
+        function check_pw() {
+            var pw1 = document.getElementById("pw1").value;
+            var pw2 = document.getElementById("pw2").value;
+            if (pw1 != pw2) {
+                alert("패스워드가 일치하지 않습니다");
+                return false;
+            }
+            return true;
         }
-        return true;
-    }
     </script>
 </head>
 
@@ -86,6 +86,8 @@ mysqli_close($con);
                             <!-- member table -->
                             <table class="table_list2 form" style="text-align:left;">
                                 <tbody>
+
+                                    <!-- id -->
                                     <tr>
                                         <th>
                                             <span class="point2">*</span>
@@ -94,11 +96,10 @@ mysqli_close($con);
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="uid" name="id" value="<?= $userid ?>"
-                                                class="margin_right large" placeholder="" maxlength="50"
-                                                style="background-color: rgb(235, 235, 235);" required readonly>
+                                            <input type="text" id="uid" name="id" value="<?= $userid ?>" class="margin_right large" placeholder="" maxlength="50" style="background-color: rgb(235, 235, 235);" required readonly>
                                         </td>
                                     </tr>
+                                    <!-- id end -->
                                     <tr>
                                         <th>
                                             <span class="point2">*</span>
@@ -107,9 +108,7 @@ mysqli_close($con);
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="password" id="pw1" name="pass" value=""
-                                                class="margin_right large" placeholder="영문,숫자,특수문자 포함 8자리 이상 20자 이하"
-                                                maxlength="50" style="background-color: rgb(235, 235, 235);" required>
+                                            <input type="password" id="pw1" name="pass" value="" class="margin_right large" placeholder="영문,숫자,특수문자 포함 8자리 이상 20자 이하" maxlength="50" style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
                                     <tr>
@@ -120,9 +119,7 @@ mysqli_close($con);
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="password" id="pw2" name="pass_confirm" value=""
-                                                class="margin_right large" placeholder="" maxlength="50"
-                                                style="background-color: rgb(235, 235, 235);" required>
+                                            <input type="password" id="pw2" name="pass_confirm" value="" class="margin_right large" placeholder="" maxlength="50" style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
                                     <tr>
@@ -133,9 +130,7 @@ mysqli_close($con);
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="" name="name" value="<?= $name ?>"
-                                                class="margin_right large" placeholder="" maxlength="50"
-                                                style="background-color: rgb(235, 235, 235);" required readonly>
+                                            <input type="text" id="" name="name" value="<?= $name ?>" class="margin_right large" placeholder="" maxlength="50" style="background-color: rgb(235, 235, 235);" required readonly>
                                         </td>
                                     </tr>
                                     <tr>
@@ -146,9 +141,7 @@ mysqli_close($con);
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="email" id="" name="email" value="<?= $email ?>"
-                                                class="margin_right large" placeholder="" maxlength="50"
-                                                style="background-color: rgb(235, 235, 235);" required>
+                                            <input type="email" id="" name="email" value="<?= $email ?>" class="margin_right large" placeholder="" maxlength="50" style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
                                     <tr>

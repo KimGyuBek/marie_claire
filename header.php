@@ -74,11 +74,12 @@
                             src="/img/common/snsicon_02.png" alt=""></a>
                     <a href="https://twitter.com/marieclairekr" target="_blank"><img src="/img/common/snsicon_03.png"
                             alt=""></a>
-                    <a href="https://www.instagram.com/marieclairekorea/"><img src="/img/common/snsicon_04.png"
-                            alt=""></a>
-                    <a href="https://www.youtube.com/user/marieclairekr"><img src="/img/common/snsicon_05.png"
-                            alt=""></a>
-                    <a href="https://post.naver.com/marieclairekorea"><img src="/img/common/snsicon_06.png" alt=""></a>
+                    <a href="https://www.instagram.com/marieclairekorea/" target="_blank"><img
+                            src="/img/common/snsicon_04.png" alt=""></a>
+                    <a href="https://www.youtube.com/user/marieclairekr" target="_blank"><img
+                            src="/img/common/snsicon_05.png" alt=""></a>
+                    <a href="https://post.naver.com/marieclairekorea" target="_blank"><img
+                            src="/img/common/snsicon_06.png" alt=""></a>
                 </div>
                 <!-- sns logo end -->
 
@@ -86,6 +87,7 @@
             </div>
         </div>
 
+        <!-- main menu -->
         <div class="header-main-menu" style="top:0px;">
             <div class="fusion-row">
                 <nav class="menu">
@@ -94,23 +96,23 @@
                     </div>
                     <ul id="main-menu-navigation" class="main-menu">
                         <li class="menu-item">
-                            <a href="" class="main-menu-link" style="height: 50px;">
+                            <a href="/board/board_list.php?dtable=fashion" class="main-menu-link" style="height: 50px;">
                                 <span class="menu-text">FASHION</span></a>
                         </li>
                         <li class="menu-item">
-                            <a href="" class="main-menu-link" style="height: 50px;">
+                            <a href="/board/board_list.php?dtable=beauty" class="main-menu-link" style="height: 50px;">
                                 <span class="menu-text">BEAUTY</span></a>
                         </li>
                         <li class="menu-item">
-                            <a href="" class="main-menu-link" style="height: 50px;">
+                            <a href="/board/board_list.php?dtable=celeb" class="main-menu-link" style="height: 50px;">
                                 <span class="menu-text">CELEB</span></a>
                         </li>
                         <li class="menu-item">
-                            <a href="" class="main-menu-link" style="height: 50px;">
+                            <a href="/board/board_list.php?dtable=culture" class="main-menu-link" style="height: 50px;">
                                 <span class="menu-text">CULTURE</span></a>
                         </li>
                         <li class="menu-item">
-                            <a href="" class="main-menu-link" style="height: 50px;">
+                            <a href="/board/board_list.php?dtable=runway" class="main-menu-link" style="height: 50px;">
                                 <span class="menu-text">RUNWAY</span></a>
                         </li>
                         <li class="menu-item">
@@ -130,6 +132,7 @@
                 </nav>
 
             </div>
+            <!-- main menu end -->
 
         </div>
 
