@@ -21,10 +21,13 @@
                             <a href=""><span class="menu-text"><?= $_SESSION['username'] ?>님</span></a>
                         </li>
                         <li>
-                            <a href="/login/logout.php"><span class="menu-text">Logout</span></a>
+                            <a href="/login/member_modify_form.php"><span class="menu-text">정보수정</span></a>
                         </li>
                         <li>
-                            <a href="/login/member_modify_form.php"><span class="menu-text">정보수정</span></a>
+                            <a href="/board/board_form.php?id=<?= $userid ?>"><span class="menu-text">글쓰기</span></a>
+                        </li>
+                        <li>
+                            <a href="/login/logout.php"><span class="menu-text">Logout</span></a>
                         </li>
                         <?php } ?>
                         <li>
@@ -112,12 +115,12 @@
                                 <span class="menu-text">CULTURE</span></a>
                         </li>
                         <li class="menu-item">
+                            <a href="/board/board_list.php?dtable=life" class="main-menu-link" style="height: 50px;">
+                                <span class="menu-text">LIFE</span></a>
+                        </li>
+                        <!-- <li class="menu-item">
                             <a href="/board/board_list.php?dtable=runway" class="main-menu-link" style="height: 50px;">
                                 <span class="menu-text">RUNWAY</span></a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="" class="main-menu-link" style="height: 50px;">
-                                <span class="menu-text">LIFE</span></a>
                         </li>
                         <li class="menu-item">
                             <a href="" class="main-menu-link" style="height: 50px;">
@@ -126,7 +129,7 @@
                         <li class="menu-item">
                             <a href="" class="main-menu-link" style="height: 50px;">
                                 <span class="menu-text">HYANGJANG</span></a>
-                        </li>
+                        </li> -->
 
                     </ul>
                 </nav>

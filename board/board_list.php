@@ -15,6 +15,9 @@ switch ($dtable):
     case "culture":
         $title .= "컬쳐(culture)";
         break;
+    case "life":
+        $title .= "라이프(life)";
+        break;
 
 endswitch;
 // die();
