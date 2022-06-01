@@ -67,8 +67,7 @@
                         <ul>
                             <li>
                                 <div class="sub_list">
-                                    <span class="sub_contents_img"><img src="img/main/post/post_img_01.jpeg"
-                                            alt=""></span>
+                                    <span class="sub_contents_img"><img src="img/main/post/post_img_01.jpeg" alt=""></span>
                                     <span class="sub_contents_text">
                                         <h4>CELEB</h4>
                                         <h2>
@@ -87,8 +86,7 @@
                             <div class="empty_blank2"></div>
                             <li>
                                 <div class="sub_list">
-                                    <span class="sub_contents_img"><img src="img/main/post/post_img_02.jpeg"
-                                            alt=""></span>
+                                    <span class="sub_contents_img"><img src="img/main/post/post_img_02.jpeg" alt=""></span>
                                     <span class="sub_contents_text">
                                         <h4>CELEB</h4>
                                         <h2>
@@ -105,8 +103,7 @@
                             <div class="empty_blank2"></div>
                             <li>
                                 <div class="sub_list">
-                                    <span class="sub_contents_img"><img src="img/main/post/post_img_03.jpeg"
-                                            alt=""></span>
+                                    <span class="sub_contents_img"><img src="img/main/post/post_img_03.jpeg" alt=""></span>
                                     <span class="sub_contents_text">
                                         <h4>CELEB</h4>
                                         <h2>
@@ -169,8 +166,7 @@
                         <ul>
                             <li>
                                 <div class="sub_list">
-                                    <span class="sub_contents_img"><img src="img/main/post/post_img_04.jpg"
-                                            alt=""></span>
+                                    <span class="sub_contents_img"><img src="img/main/post/post_img_04.jpg" alt=""></span>
                                     <span class="sub_contents_text">
                                         <h4>FASHION</h4>
                                         <h2>
@@ -190,8 +186,7 @@
                             <div class="empty_blank2"></div>
                             <li>
                                 <div class="sub_list">
-                                    <span class="sub_contents_img"><img src="img/main/post/post_img_05.jpg"
-                                            alt=""></span>
+                                    <span class="sub_contents_img"><img src="img/main/post/post_img_05.jpg" alt=""></span>
                                     <span class="sub_contents_text">
                                         <h4>CULTURE</h4>
                                         <h2>
@@ -212,8 +207,7 @@
                             <div class="empty_blank2"></div>
                             <li>
                                 <div class="sub_list">
-                                    <span class="sub_contents_img"><img src="img/main/post/post_img_06.jpg"
-                                            alt=""></span>
+                                    <span class="sub_contents_img"><img src="img/main/post/post_img_06.jpg" alt=""></span>
                                     <span class="sub_contents_text">
                                         <h4>CELEB</h4>
                                         <h2>
@@ -277,8 +271,7 @@
                         <ul>
                             <li>
                                 <div class="sub_list">
-                                    <span class="sub_contents_img"><img src="img/main/post/post6_img_02.jpg"
-                                            alt=""></span>
+                                    <span class="sub_contents_img"><img src="img/main/post/post6_img_02.jpg" alt=""></span>
                                     <span class="sub_contents_text">
                                         <h4>FASHION</h4>
                                         <h2>
@@ -297,8 +290,7 @@
                             <div class="empty_blank2"></div>
                             <li>
                                 <div class="sub_list">
-                                    <span class="sub_contents_img"><img src="img/main/post/post6_img_01.jpg"
-                                            alt=""></span>
+                                    <span class="sub_contents_img"><img src="img/main/post/post6_img_01.jpg" alt=""></span>
                                     <span class="sub_contents_text">
                                         <h4>LIFESTYLE</h4>
                                         <h2>
@@ -316,8 +308,7 @@
                             <div class="empty_blank2"></div>
                             <li>
                                 <div class="sub_list">
-                                    <span class="sub_contents_img"><img src="img/main/post/post6_img_03.jpg"
-                                            alt=""></span>
+                                    <span class="sub_contents_img"><img src="img/main/post/post6_img_03.jpg" alt=""></span>
                                     <span class="sub_contents_text">
                                         <h4>CULTURE</h4>
                                         <h2>

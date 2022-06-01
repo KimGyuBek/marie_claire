@@ -157,12 +157,16 @@ $dtable = "";
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="uid" name="content" value="" placeholder=""
-                                                class="margin_right large" maxlength="3000"
-                                                style="background-color: rgb(235, 235, 235); height:700px;" required>
+                                            <textarea name="content" id="uid"
+                                                style="background-color: rgb(235, 235, 235); height:700px;"></textarea>
                                         </td>
                                     </tr>
                                     <!-- id end -->
+                                    <tr>
+                                        <th>
+                                            <span class="point2"></span>
+                                        </th>
+                                    </tr>
                                     <tr>
                                         <td class="join_id">
                                             <input class="login_btn" type="submit" value="등록" onclick="">

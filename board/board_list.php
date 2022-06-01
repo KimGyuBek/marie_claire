@@ -66,23 +66,26 @@ $result = mysqli_query($con, $sql);
                     <article class="sub_post">
                         <ul>
                             <?php
-                            while ($row = mysqli_fetch_array($result)) {
-                                echo "<li>";
-                                echo "<div class='sub_list'>";
-                                echo " <span class='sub_contents_img'><img src='{$row['file_dir']}'
-                                alt=''></span>";
-                                echo "<span class='sub_contents_text'>";
-                                echo "<h2>{$row['main_title']}</h2>";
-                                echo "<p>";
-                                echo "{$row['subject']}";
-                                echo "</p>";
-                                echo "</span>";
-                                echo "</div>";
-                                echo "</li>";
-                                echo "<div class='empty_blank2'></div>";
-                            }
-                            ?>
-
+                            while ($row = mysqli_fetch_array($result)) { ?>
+                            <li>
+                                <a href="/board/board_view.php?dtable=<?= $dtable ?>&num=<?= $row['num'] ?>">
+                                    <div class="sub_list">
+                                        <span class="sub_contents_img">
+                                            <img src="<?= $row['file_dir'] ?>" alt="">
+                                        </span>
+                                        <span class="sub_contents_text">
+                                            <h2>
+                                                <?= $row['main_title'] ?>
+                                            </h2>
+                                            <p>
+                                                <?= $row['subject'] ?>
+                                            </p>
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <div class="empty_blank2"></div>
+                            <?php } ?>
                         </ul>
                     </article>
                     <!-- list end end -->

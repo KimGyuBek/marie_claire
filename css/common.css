@@ -389,3 +389,49 @@ img {
 li {
   list-style: none;
 }
+
+a {
+  color: #000000;
+}
+
+.view_main_title > h1 {
+  color: #4a4e57;
+  font-size: 32px;
+  margin: 40px 0px 0px;
+}
+
+.view_sub_title > h1 {
+  font-size: 1em;
+  font-weight: normal;
+  color: #cdcdcd;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+.view_subject > h1 {
+  color: #4a4e57;
+  font-size: 16px;
+  margin: 16px 0px;
+}
+
+.empty_blank1 {
+  height: 25px;
+}
+
+.view_content {
+  padding-left: 300px;
+  padding-right: 300px;
+}
+.view_content > p,
+.view_editor > p {
+  font-size: 16px;
+  text-align: center;
+  color: #4a4e57;
+  padding: 0px 0px 20px;
+  display: block;
+  line-height: 200%;
+}
+
+.view_editor > p {
+  font-weight: bold;
+}

@@ -12,11 +12,6 @@ $dtable = $_GET['dtable'];
 
 $sql_table .= "fashion";
 
-// if ($dtable == "qna")
-//     $sql_table .= "qna";
-// else if ($dtable == "notice")
-//     $sql_table .= "board";
-// die($sql_table);
 
 
 if (!$userid) {
@@ -62,21 +57,6 @@ mysqli_close($con);                // DB 연결 끊기
 echo "
 <script>
 alert('게시글 등록 완료');
-location.href = 'board/board_list.php?dtable=fashion';
+location.href = '/board/board_list.php?dtable=fashion';
 </script>"
-// if ($dtable == "notice") {
-//     echo "
-// 		   <script>
-// 		   alert('게시글이 등록되었습니다.');
-// 		   location.href = '/board/board_list.php?dtable=notice';
-// 	</script>
-// 	";
-// } else if ($dtable == "qna") {
-//     echo "
-// 		   <script>
-// 		   alert('게시글이 등록되었습니다.');
-// 		   location.href = '/board/board_list.php?dtable=qna';
-// 	</script>
-// 	";
-// }
 ?>
