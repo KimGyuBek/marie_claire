@@ -10,7 +10,7 @@ $dtable = $_GET['dtable'];
 
 // die($dtable);
 
-$sql_table .= "fashion";
+$sql_table .= "beauty";
 
 
 
@@ -24,10 +24,10 @@ if (!$userid) {
     exit;
 }
 
-$main_title = $_POST["main_title"];
-$sub_title = $_POST["sub_title"];
-$subject = $_POST["subject"];
-$content = $_POST["content"];
+$main_title = htmlspecialchars($_POST["main_title"], ENT_QUOTES);
+$sub_title = htmlspecialchars($_POST["sub_title"], ENT_QUOTES);
+$subject = htmlspecialchars($_POST["subject"], ENT_QUOTES);
+$content = htmlspecialchars($_POST["content"], ENT_QUOTES);
 $file_dir = $_POST["file_dir"];
 
 // $subject = $_POST["subject"];
@@ -43,6 +43,8 @@ $con = mysqli_connect("localhost", "user1", "12345", "marieclaire");
 
 $sql = "insert into " . $sql_table . " (id, name, main_title, sub_title, subject, content, regist_day, file_dir) ";
 $sql .= "values('$userid', '$username', '$main_title', '$sub_title', '$subject', '$content', '$regist_day', '$file_dir');";
+
+// die($sql);
 
 // die($sql);
 

@@ -8,7 +8,7 @@ $name = $row['name'];
 
 $dtable = "";
 // die($name);
-
+$dtable = "fashion";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,11 +74,11 @@ $dtable = "";
                                     <tr>
                                         <td class="join_id">
                                             <select name="" id="">
-                                                <option value="FASHION"><?= $dtable .= "fashion" ?></option>
-                                                <option value="BEAUTY"><?= $dtable .= "beauty" ?></option>
-                                                <option value="CELEB"><?= $dtable .= "celeb" ?></option>
-                                                <option value="CULTURE"><?= $dtable .= "culture" ?></option>
-                                                <option value="LIFE"><?= $dtable .= "life" ?></option>
+                                                <option value="FASHION"><?= $dtable = "fashion" ?></option>
+                                                <option value="BEAUTY"><?= $dtable = "beauty" ?></option>
+                                                <option value="CELEB"><?= $dtable = "celeb" ?></option>
+                                                <option value="CULTURE"><?= $dtable = "culture" ?></option>
+                                                <option value="LIFE"><?= $dtable = "life" ?></option>
                                             </select>
                                         </td>
                                     </tr>
@@ -90,9 +90,7 @@ $dtable = "";
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="uid" name="name" value="<?= $name ?>"
-                                                class="margin_right large" placeholder="영문, 숫자로만 6-20자" maxlength="50"
-                                                style="background-color: rgb(235, 235, 235);" required readonly>
+                                            <input type="text" id="uid" name="name" value="<?= $name ?>" class="margin_right large" placeholder="영문, 숫자로만 6-20자" maxlength="50" style="background-color: rgb(235, 235, 235);" required readonly>
                                         </td>
                                     </tr>
                                     <!-- id end -->
@@ -104,9 +102,7 @@ $dtable = "";
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="uid" name="main_title" value="" placeholder="100자 이내"
-                                                class="margin_right large" maxlength="100"
-                                                style="background-color: rgb(235, 235, 235);" required>
+                                            <input type="text" id="uid" name="main_title" value="" placeholder="100자 이내" class="margin_right large" maxlength="100" style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
                                     <tr>
@@ -117,9 +113,7 @@ $dtable = "";
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="uid" name="sub_title" value="" placeholder="100자 이내"
-                                                class="margin_right large" maxlength="100"
-                                                style="background-color: rgb(235, 235, 235);" required>
+                                            <input type="text" id="uid" name="sub_title" value="" placeholder="100자 이내" class="margin_right large" maxlength="100" style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
                                     <tr>
@@ -130,9 +124,7 @@ $dtable = "";
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="uid" name="subject" value="" placeholder="100자 이내"
-                                                class="margin_right large" maxlength="100"
-                                                style="background-color: rgb(235, 235, 235);" required>
+                                            <input type="text" id="uid" name="subject" value="" placeholder="100자 이내" class="margin_right large" maxlength="100" style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
                                     <tr>
@@ -143,10 +135,10 @@ $dtable = "";
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="uid" name="file_dir"
-                                                value="/img/post/<?= $dtable ?>/" placeholder="100자 이내"
-                                                class="margin_right large" maxlength=""
-                                                style="background-color: rgb(235, 235, 235);" required>
+                                            <!-- <input type="text" id="uid" name="file_dir" value="/img/post/beauty/"
+                                                placeholder="100자 이내" class="margin_right large" maxlength=""
+                                                style="background-color: rgb(235, 235, 235);" required> -->
+                                            <input type="text" id="uid" name="file_dir" value="/img/post/<?= $dtable ?>/" placeholder="100자 이내" class="margin_right large" maxlength="" style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
                                     <tr>
@@ -157,8 +149,7 @@ $dtable = "";
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <textarea name="content" id="uid"
-                                                style="background-color: rgb(235, 235, 235); height:700px;"></textarea>
+                                            <textarea name="content" id="uid" style="background-color: rgb(235, 235, 235); height:700px;" required></textarea>
                                         </td>
                                     </tr>
                                     <!-- id end -->
