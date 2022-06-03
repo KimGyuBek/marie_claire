@@ -118,19 +118,6 @@
                             <a href="/board/board_list.php?dtable=life" class="main-menu-link" style="height: 50px;">
                                 <span class="menu-text">LIFE</span></a>
                         </li>
-                        <!-- <li class="menu-item">
-                            <a href="/board/board_list.php?dtable=runway" class="main-menu-link" style="height: 50px;">
-                                <span class="menu-text">RUNWAY</span></a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="" class="main-menu-link" style="height: 50px;">
-                                <span class="menu-text">HOROSCOPE</span></a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="" class="main-menu-link" style="height: 50px;">
-                                <span class="menu-text">HYANGJANG</span></a>
-                        </li> -->
-
                     </ul>
                 </nav>
 

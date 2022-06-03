@@ -2,13 +2,13 @@
 $dtable = $_GET['dtable'];
 $num = $_GET['num'];
 $title = "";
-// die();
 $con = mysqli_connect("localhost", "user1", "12345", "marieclaire");
 $sql = "select * from " . $dtable . " where num = " . $num;
-// die($sql);
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_array($result);
 $title .= $row['main_title'];
+
+// die($_SESSION['userlevel']);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,6 +21,18 @@ $title .= $row['main_title'];
     <link rel="stylesheet" href="/css/header.css?<?php echo date('Y h:i:s'); ?>">
     <link rel="stylesheet" href="/css/common.css?<?php echo date('Y h:i:s'); ?>">
     <link rel="stylesheet" href="/css/main.css?<?php echo date('Y h:i:s'); ?>">
+    <link rel="stylesheet" href="/css/login.css?<?php echo date('Y h:i:s'); ?>">
+    <script>
+    function onclick_edit() {
+        if (confirm("게시글을 수정하시겠습니까?"))
+            location.href = "/board/board_form_modify.php?dtable=<?= $dtable ?>&num=<?= $num ?>";
+    }
+
+    function onclick_delete() {
+        if (confirm("게시글을 삭제하시겠습니까?"))
+            location.href = "/board/board_delete.php?dtable=<?= $dtable ?>&num=<?= $num ?>";
+    }
+    </script>
 </head>
 
 <body>
@@ -35,9 +47,7 @@ $title .= $row['main_title'];
             </header>
             <!-- header end -->
 
-            <!-- slider -->
         </div>
-        <!-- slider end -->
 
         <div class="empty_blank1"></div>
         <div id="contents">
@@ -108,7 +118,22 @@ $title .= $row['main_title'];
                     <!-- editor end -->
 
                 </div>
-                <!-- page view end -->
+
+                <div class="empty_blank2"></div>
+
+                <!-- edit & delete post -->
+                <?php if ($_SESSION['userid'] == $row['id'] || $_SESSION['userlevel'] == 9) { ?>
+                <span>
+                    <button class="etc_btn" type="button" onclick="onclick_edit()">수정</button>
+                </span>
+                <span>
+                    <button class="etc_btn" type="button" onclick="onclick_delete()">글
+                        삭제</button>
+                </span>
+                <?php } ?>
+
+
+                <!-- edit&delte post end -->
 
 
                 <div class="empty_blank"></div>

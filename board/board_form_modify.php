@@ -1,14 +1,22 @@
 <?php
-$id = $_GET['id'];
 $con = mysqli_connect("localhost", "user1", "12345", "marieclaire");
-$sql = "select name from members where id='$id'";
+$dtable = $_GET['dtable'];
+$num = $_GET['num'];
+
+$sql = "select * from " . $dtable . " where num= " . $num;
+// die($sql);
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_array($result);
-$name = $row['name'];
 
-$dtable = "";
-// die($name);
-$dtable = "fashion";
+$name = $row['name'];
+$main_title = $row['main_title'];
+$sub_title = $row['sub_title'];
+$subject = $row['subject'];
+$content = $row['content'];
+$file_dir = $row['file_dir'];
+
+$form_action = "/board/board_modify.php?dtable=" . $dtable . "&num=" . $num;
+// die($form_action);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,21 +25,11 @@ $dtable = "fashion";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MARIECLAIREKOREA - 글쓰기</title>
+    <title>MARIECLAIREKOREA - 게시글 수정</title>
     <link rel="stylesheet" href="../css/header.css?<?php echo date('Y h:i:s'); ?>">
     <link rel="stylesheet" href="../css/common.css?<?php echo date('Y h:i:s'); ?>">
     <link rel="stylesheet" href="../css/login.css?<?php echo date('Y h:i:s'); ?>">
     <script>
-    function select_dtable() {
-        var dtable_select = document.getElementById("dtable");
-
-        var selectValue = dtable_select.options[dtable_select.selectedIndex].value;
-        setCookie('selected', selectValue, 3);
-        // alert(selectValue);
-        history.go();
-
-    }
-
     function setCookie(cookie_name, value, days) {
         var exdate = new Date();
         exdate.setDate(exdate.getDate() + days);
@@ -65,7 +63,7 @@ $dtable = "fashion";
                         <!-- login title  -->
                         <div id="member_title" class="fusion-row aligncenter">
                             <span>
-                                <h1>글쓰기</h1>
+                                <h1>게시글 수정</h1>
                             </span>
                             <!-- login title end -->
                         </div>
@@ -77,8 +75,7 @@ $dtable = "fashion";
                     <div class="table_wrap">
 
                         <!-- member form  -->
-                        <form name="memFrm" method="POST" action="board_insert.php?dtable=<?= $_COOKIE['selected'] ?>">
-                            <input type="hidden" name="id" value="<?= $id ?>">
+                        <form name="memFrm" method="POST" action="<?= $form_action ?>">
 
                             <!-- member table -->
                             <table class="table_list2 form" style="text-align:left;">
@@ -94,12 +91,8 @@ $dtable = "fashion";
                                     <tr>
                                         <td class="join_id">
                                             <select name="dtable[]" id="dtable" onchange="select_dtable()">
-                                                <option value="게시판" selected>게시판</option>
-                                                <option value="fashion">FASHION</option>
-                                                <option value="beauty">BEAUTY</option>
-                                                <option value="celeb">CELEB</option>
-                                                <option value="culture">CULTURE</option>
-                                                <option value="life">LIFE</option>
+                                                <option value="<?= $dtable ?>" selected aria-readonly=""><?= $dtable ?>
+                                                </option>
                                             </select>
                                         </td>
                                     </tr>
@@ -115,7 +108,7 @@ $dtable = "fashion";
                                     <tr>
                                         <td class="join_id">
                                             <input type="text" id="uid" name="name" value="<?= $name ?>"
-                                                class="margin_right large" placeholder="영문, 숫자로만 6-20자" maxlength="50"
+                                                class="margin_right large" placeholder="" maxlength="50"
                                                 style="background-color: rgb(235, 235, 235);" required readonly>
                                         </td>
                                     </tr>
@@ -130,8 +123,8 @@ $dtable = "fashion";
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="uid" name="main_title" value="" placeholder="100자 이내"
-                                                class="margin_right large" maxlength="100"
+                                            <input type="text" id="uid" name="main_title" value="<?= $main_title ?>"
+                                                placeholder="" class="margin_right large" maxlength="100"
                                                 style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
@@ -146,8 +139,8 @@ $dtable = "fashion";
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="uid" name="sub_title" value="" placeholder="100자 이내"
-                                                class="margin_right large" maxlength="100"
+                                            <input type="text" id="uid" name="sub_title" value="<?= $sub_title ?>"
+                                                placeholder="100자 이내" class="margin_right large" maxlength="100"
                                                 style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
@@ -162,8 +155,8 @@ $dtable = "fashion";
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input type="text" id="uid" name="subject" value="" placeholder="100자 이내"
-                                                class="margin_right large" maxlength="100"
+                                            <input type="text" id="uid" name="subject" value="<?= $subject ?>"
+                                                placeholder="100자 이내" class="margin_right large" maxlength="100"
                                                 style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
@@ -181,9 +174,8 @@ $dtable = "fashion";
                                             <!-- <input type="text" id="uid" name="file_dir" value="/img/post/beauty/"
                                                 placeholder="100자 이내" class="margin_right large" maxlength=""
                                                 style="background-color: rgb(235, 235, 235);" required> -->
-                                            <input type="text" id="uid" name="file_dir"
-                                                value="/img/post/<?= $_COOKIE['selected'] ?>/" placeholder="100자 이내"
-                                                class="margin_right large" maxlength=""
+                                            <input type="text" id="uid" name="file_dir" value="<?= $file_dir ?>/"
+                                                placeholder="100자 이내" class="margin_right large" maxlength=""
                                                 style="background-color: rgb(235, 235, 235);" required>
                                         </td>
                                     </tr>
@@ -200,7 +192,7 @@ $dtable = "fashion";
                                         <td class="join_id">
                                             <textarea name="content" id="uid"
                                                 style="background-color: rgb(235, 235, 235); height:700px;"
-                                                required></textarea>
+                                                required><?= $content ?></textarea>
                                         </td>
                                     </tr>
                                     <!-- content end -->
@@ -213,7 +205,7 @@ $dtable = "fashion";
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <input class="login_btn" type="submit" value="등록" onclick="">
+                                            <input class="login_btn" type="submit" value="수정 완료" onclick="">
                                         </td>
                                     </tr>
                                     <!-- submit btn end -->

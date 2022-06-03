@@ -20,13 +20,10 @@ switch ($dtable):
         break;
 
 endswitch;
-// die();
 
 $con = mysqli_connect("localhost", "user1", "12345", "marieclaire");
 $sql = "select * from " . $dtable;
-// die($sql);
 $result = mysqli_query($con, $sql);
-// print_r($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -98,8 +95,6 @@ $result = mysqli_query($con, $sql);
         <!-- wrapper end -->
 
     </div>
-
-
 
     <!-- footer start -->
     <footer>

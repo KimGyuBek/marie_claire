@@ -6,9 +6,9 @@ else $userid = "";
 if (isset($_SESSION["username"])) $username = $_SESSION["username"];
 else $username = "";
 
-// $dtable = $_GET['dtable'];
-// die($dtable);
 $sql_table .= $_GET['dtable'];
+$num = $_GET['num'];
+
 if (!$userid) {
     echo ("
                     <script>
@@ -30,8 +30,16 @@ $regist_day = date("Y-m-d-h H:s");  // 현재의 '년-월-일'을 저장
 
 $con = mysqli_connect("localhost", "user1", "12345", "marieclaire");
 
-$sql = "insert into " . $sql_table . " (id, name, main_title, sub_title, subject, content, regist_day, file_dir) ";
-$sql .= "values('$userid', '$username', '$main_title', '$sub_title', '$subject', '$content', '$regist_day', '$file_dir');";
+$sql = "update " . $sql_table . " set ";
+$sql .=
+    "main_title='" . $main_title
+    . "' ,sub_title='" . $sub_title
+    . "' ,subject='" . $subject
+    . "' ,content='" . $content
+    . "' ,regist_day='" . $regist_day
+    . "' ,file_dir='" . $file_dir;
+$sql .= "' where num=" . $num;
+
 
 // die($sql);
 
@@ -42,7 +50,7 @@ mysqli_close($con);                // DB 연결 끊기
 
 echo "
 <script>
-alert('게시글 등록 완료');
-location.href = '/board/board_list.php?dtable=fashion';
+    alert('게시글 수정 완료');
+    location.href = '/board/board_view.php?dtable={$sql_table}&num={$num}';
 </script>"
 ?>

@@ -20,20 +20,16 @@
 
 .login_img {
   width: 50%;
-  /* margin: 15px; */
 }
 
 .login_insert {
   width: 50%;
   margin-top: 30px;
-
-  /* margin: 15px;
-  padding-left: 40px;
-  padding-right: 40px; */
 }
 
 .login_btn,
-.member_btn {
+.member_btn,
+.etc_btn {
   color: aliceblue;
   font-size: 12px;
   display: inline-block;

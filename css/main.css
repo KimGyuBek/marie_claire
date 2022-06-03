@@ -14,9 +14,7 @@
 }
 
 #image_slider img {
-  /* width: 720px; */
   height: 405px;
-  /* width: 100%; */
 }
 
 @keyframes slidy {
@@ -116,17 +114,12 @@ div#slider figure {
 
 .sub_list {
   display: flex;
-  /* marVjgin-top: 40px;
-  margin-bottom: 40px; */
 }
 
 .sub_list > span {
   display: inline-block;
 }
 
-.slide2 > li > span > img {
-  /* padding: 15px; */
-}
 
 .slide2 > li > span > p {
   font-size: 19px;

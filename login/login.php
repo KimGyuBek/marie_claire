@@ -36,11 +36,20 @@ if (!$num_match) {
         $_SESSION["username"] = $row["name"];
         $_SESSION["userlevel"] = $row["level"];
 
-        echo ("    
+        if ($row['level'] == 9) {
+            echo ("    
+                    <script> 
+                        alert('관리자 로그인 되었습니다.');
+                        location.href='/index.php';	
+                    </script>   
+                ");
+        } else {
+            echo ("    
                 <script> 
                     alert('로그인 되었습니다.');
                     location.href='/index.php';	
                 </script>   
             ");
+        }
     }
 }

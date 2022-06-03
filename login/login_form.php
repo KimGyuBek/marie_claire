@@ -31,7 +31,6 @@
                         <!-- login title  -->
                         <span>
                             <h1>LOGIN</h1>
-                            <!-- <h1>로그인</h1> -->
                         </span>
                         <!-- login title end -->
 

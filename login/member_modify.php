@@ -11,7 +11,6 @@ $sql .= " where id='$id'";
 mysqli_query($con, $sql);
 mysqli_close($con);
 
-// die($sql);
 echo "  
         <script>   
             alert('회원정보가 수정되었습니다');
