@@ -24,7 +24,7 @@
             <!-- header end -->
 
             <!-- slider -->
-            <div id="slider-container">
+            <div id="slider-container" class="contents">
                 <section id="image_slider">
                     <div id="slider">
                         <figure>

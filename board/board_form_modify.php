@@ -4,7 +4,6 @@ $dtable = $_GET['dtable'];
 $num = $_GET['num'];
 
 $sql = "select * from " . $dtable . " where num= " . $num;
-// die($sql);
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_array($result);
 
@@ -16,7 +15,6 @@ $content = $row['content'];
 $file_dir = $row['file_dir'];
 
 $form_action = "/board/board_modify.php?dtable=" . $dtable . "&num=" . $num;
-// die($form_action);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +31,6 @@ $form_action = "/board/board_modify.php?dtable=" . $dtable . "&num=" . $num;
     function setCookie(cookie_name, value, days) {
         var exdate = new Date();
         exdate.setDate(exdate.getDate() + days);
-        // 설정 일수만큼 현재시간에 만료값으로 지정
 
         var cookie_value = escape(value) + ((days == null) ? '' : '; expires=' + exdate.toUTCString());
         document.cookie = cookie_name + '=' + cookie_value;
@@ -171,10 +168,7 @@ $form_action = "/board/board_modify.php?dtable=" . $dtable . "&num=" . $num;
                                     </tr>
                                     <tr>
                                         <td class="join_id">
-                                            <!-- <input type="text" id="uid" name="file_dir" value="/img/post/beauty/"
-                                                placeholder="100자 이내" class="margin_right large" maxlength=""
-                                                style="background-color: rgb(235, 235, 235);" required> -->
-                                            <input type="text" id="uid" name="file_dir" value="<?= $file_dir ?>/"
+                                            <input type="text" id="uid" name="file_dir" value="<?= $file_dir ?>"
                                                 placeholder="100자 이내" class="margin_right large" maxlength=""
                                                 style="background-color: rgb(235, 235, 235);" required>
                                         </td>

@@ -97,7 +97,7 @@ $title .= $row['main_title'];
 
                     <!-- content -->
                     <div class="view_content">
-                        <p>
+                        <p style="white-space: pre-line;">
                             <?= $row['content'] ?>
                         </p>
                     </div>

@@ -7,7 +7,6 @@ $row = mysqli_fetch_array($result);
 $name = $row['name'];
 
 $dtable = "";
-// die($name);
 $dtable = "fashion";
 ?>
 <!DOCTYPE html>

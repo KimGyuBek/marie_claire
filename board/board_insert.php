@@ -43,6 +43,6 @@ mysqli_close($con);                // DB 연결 끊기
 echo "
 <script>
 alert('게시글 등록 완료');
-location.href = '/board/board_list.php?dtable=fashion';
+location.href = '/board/board_list.php?dtable={$sql_table}';
 </script>"
 ?>

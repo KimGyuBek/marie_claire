@@ -2,6 +2,8 @@
 #slider-container {
   margin-top: 8px;
   position: relative;
+  width: 1024px;
+  margin: 20px auto;
 }
 
 #image_slider {
@@ -119,7 +121,6 @@ div#slider figure {
 .sub_list > span {
   display: inline-block;
 }
-
 
 .slide2 > li > span > p {
   font-size: 19px;

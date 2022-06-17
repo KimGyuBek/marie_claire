@@ -8,7 +8,6 @@ $con = mysqli_connect("localhost", "user1", "12345", "marieclaire");
 
 $sql = "delete from " . $sql_table . " where num = " . $num;
 
-// die($sql);
 
 mysqli_query($con, $sql);
 

@@ -1,22 +1,28 @@
 <?php
 $dtable = $_GET['dtable'];
 $title = "";
+$tag = "";
 
 switch ($dtable):
     case "fashion":
         $title .= "패션(fashion)";
+        $tag .= "FASHION";
         break;
     case "beauty":
         $title .= "뷰티(beauty)";
+        $tag .= "BEAUTY";
         break;
     case "celeb":
         $title .= "셀럽(celeb)";
+        $tag .= "CELEB";
         break;
     case "culture":
         $title .= "컬쳐(culture)";
+        $tag .= "CULTURE";
         break;
     case "life":
         $title .= "라이프(life)";
+        $tag .= "LIFE";
         break;
 
 endswitch;
@@ -71,6 +77,7 @@ $result = mysqli_query($con, $sql);
                                             <img src="<?= $row['file_dir'] ?>" alt="">
                                         </span>
                                         <span class="sub_contents_text">
+                                            <h4><?= $tag ?></h4>
                                             <h2>
                                                 <?= $row['main_title'] ?>
                                             </h2>
